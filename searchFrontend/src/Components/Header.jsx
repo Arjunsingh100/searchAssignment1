@@ -10,7 +10,7 @@ const Header = () => {
     const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { data } = await axios.get(`http://localhost:4000/api/v1/searchAssignment/search/${values.searchKeyword}`);
+        const { data } = await axios.get(`https://searchassignment1.onrender.com/api/v1/searchAssignment/search/${values.searchKeyword}`);
         console.log(data)
         setValues({ ...values, results: data?.products });
         console.log(values.results)
